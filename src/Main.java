@@ -1,3 +1,6 @@
+import exceptions.MyArrayDataException;
+import exceptions.MyArraySizeException;
+
 public class Main {
 
     /**
@@ -16,7 +19,7 @@ public class Main {
         MyArrayManager myArrayManager = new MyArrayManager();
         try {
             System.out.println("Sum of array elements is " + myArrayManager.SumArrayElements(array));
-        } catch (Exception exception) {
+        } catch (MyArraySizeException | MyArrayDataException exception) {
             System.out.println("An error has occurred during execution!");
             exception.printStackTrace();
         }

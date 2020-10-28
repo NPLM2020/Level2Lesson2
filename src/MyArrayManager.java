@@ -19,7 +19,7 @@ public class MyArrayManager {
      * @throws MyArraySizeException - Invalid array size
      * @throws MyArrayDataException - Invalid data in some cell
      */
-    public int SumArrayElements(String[][] array) throws Exception {
+    public int SumArrayElements(String[][] array) throws MyArraySizeException, MyArrayDataException {
         int sum = 0;
         String sizeErrorTemplate = String.format("Invalid array size. The size must be [%s][%s]!",
                 arraySize, arraySize);
