@@ -35,7 +35,7 @@ public class MyArrayManager {
             for (int j = 0; j < array[i].length; j++) {
                 try {
                     sum += Integer.parseInt(array[i][j]);
-                } catch (Exception exception) {
+                } catch (NumberFormatException exception) {
                     throw new MyArrayDataException(String.format("Invalid data in cell: [%s][%s]!", i, j), exception);
                 }
             }
